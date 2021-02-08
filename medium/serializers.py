@@ -5,14 +5,15 @@ from medium.models import Article
 
 class ApiCreate(serializers.ModelSerializer):
     class Meta:
-        model=Article
-        fields=[
+        model = Article
+        fields = [
             'title',
-            # 'author',
+            'author__name',
             'description',
             'slug',
             'body',
             'created_at',
             'category',
             # 'tags',
+            'image',
         ]
